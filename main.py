@@ -21,7 +21,8 @@ def main():
     with user_client:
         while True:
             print("[INFO] starting to check uptime..")
-            edit_text = f"🔰𝐓𝐫𝐚𝐜𝐤𝐬𝐭𝐮𝐝𝐢𝐨'𝐬 𝐁𝐨𝐭𝐬 𝐒𝐭𝐚𝐭𝐮𝐬🔰\n\n__( All bots are checked automatically if any correction report it )__\n\n\n"
+            edit_text = "🔰𝐓𝐫𝐚𝐜𝐤𝐬𝐭𝐮𝐝𝐢𝐨'𝐬 𝐁𝐨𝐭𝐬 𝐒𝐭𝐚𝐭𝐮𝐬🔰\n\n__( All bots are checked automatically if any correction report it )__\n\n\n"
+
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
@@ -48,7 +49,7 @@ def main():
                 user_client.edit_message_text(int(update_channel), status_message_id,
                                          edit_text)
                 time.sleep(5)
-            print(f"[INFO] everything done! sleeping for 1 hour...")
+            print('[INFO] everything done! sleeping for 1 hour...')
 
             time.sleep(60 * 60)
 
